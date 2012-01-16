@@ -2,7 +2,7 @@ name := "sff4smode"
 
 organization := "com.github.seratch"
 
-crossScalaVersions := Seq("2.9.1", "2.9.0-1", "2.9.0")
+crossScalaVersions := Seq("2.9.1")
 
 scalaVersion := "2.9.1"
 
@@ -23,8 +23,7 @@ libraryDependencies <++= (scalaVersion) { scalaVersion =>
     "com.eed3si9n"            %% "sff4s-akka"           % "0.1.0",
     "com.eed3si9n"            %% "sff4s-twitter-util"   % "0.1.0",
     "junit"                   %  "junit"                % "4.10"     % "test",
-    "org.scalatest"           %% "scalatest"            % "1.6.1"    % "test",
-    "org.scala-tools.testing" %% "scalacheck"           % "1.9"      % "test"
+    "org.scalatest"           %% "scalatest"            % "1.6.1"    % "test"
   )
 }
 
