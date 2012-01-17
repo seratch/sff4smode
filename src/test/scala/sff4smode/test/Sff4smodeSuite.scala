@@ -61,18 +61,14 @@ class Sff4smodeSuite extends FunSuite with ShouldMatchers {
     f() should equal("fooo")
   }
 
-  // TODO  https://github.com/eed3si9n/sff4s/pull/1
-  //  test("toSff4s from java.util.concurrent.Future") {
-  //    import java.util.concurrent.FutureTask
-  //    import sff4smode._
-  //    val jucFuture = new FutureTask(new Callable[String]() {
-  //      def call(): String = "fooo"
-  //    })
-  //    jucFuture.run()
-  //    val f: sff4s.Future[String] = toSff4s(jucFuture)
-  //    f onSuccess (t => t should equal("fooo")) onFailure (t => fail())
-  //    f() should equal("fooo")
-  //  }
+  test("toSff4s from java.util.concurrent.Future") {
+    import sff4smode._
+    val executor = java.util.concurrent.Executors.newFixedThreadPool(10)
+    val jucFuture = executor.submit(new Callable[String]() { def call(): String = "fooo" })
+    val f: sff4s.Future[String] = toSff4s(jucFuture)
+    f onSuccess (t => t should equal("fooo")) onFailure (t => fail())
+    f() should equal("fooo")
+  }
 
   test("toSff4s from scala.actors.Future") {
     import sff4smode._

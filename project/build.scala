@@ -1,7 +1,7 @@
 import sbt._
 import Keys._
 
-object ScalikeJDBCBuild extends Build {
+object Sff4sModeBuild extends Build {
 
   lazy val sff4smode = Project("sff4smode", file("."), settings = mainSettings)
 
@@ -9,7 +9,7 @@ object ScalikeJDBCBuild extends Build {
     sbtPlugin := false,
     organization := "com.github.seratch",
     name := "sff4smode",
-    version := "0.1.0",
+    version := "0.1.1",
     publishTo <<= (version) {
       version: String =>
         Some(

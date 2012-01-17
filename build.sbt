@@ -17,11 +17,11 @@ resolvers ++= Seq(
 libraryDependencies <++= (scalaVersion) { scalaVersion =>
   Seq(
     "ch.qos.logback"          %  "logback-classic"      % "1.0.0",
-    "com.eed3si9n"            %% "sff4s-api"            % "0.1.0",
-    "com.eed3si9n"            %% "sff4s-actors"         % "0.1.0",
-    "com.eed3si9n"            %% "sff4s-juc"            % "0.1.0",
-    "com.eed3si9n"            %% "sff4s-akka"           % "0.1.0",
-    "com.eed3si9n"            %% "sff4s-twitter-util"   % "0.1.0",
+    "com.eed3si9n"            %% "sff4s-api"            % "0.1.1",
+    "com.eed3si9n"            %% "sff4s-actors"         % "0.1.1",
+    "com.eed3si9n"            %% "sff4s-juc"            % "0.1.1",
+    "com.eed3si9n"            %% "sff4s-akka"           % "0.1.1",
+    "com.eed3si9n"            %% "sff4s-twitter-util"   % "0.1.1",
     "junit"                   %  "junit"                % "4.10"     % "test",
     "org.scalatest"           %% "scalatest"            % "1.6.1"    % "test"
   )
