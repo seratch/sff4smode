@@ -10,7 +10,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.github.seratch" %% "sff4smode" % "0.1.0" withSources ()
+  "com.github.seratch" %% "sff4smode" % "0.1.2" withSources ()
 )
 ```
 

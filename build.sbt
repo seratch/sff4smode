@@ -7,16 +7,13 @@ crossScalaVersions := Seq("2.9.1")
 scalaVersion := "2.9.1"
 
 resolvers ++= Seq(
-  "scala-tools-snapshots" at "http://scala-tools.org/repo-snapshots",
-  "scala-tools-releases"  at "http://scala-tools.org/repo-releases",
-  "Akka repo"             at "http://akka.io/repository/",
-  "seratch-github-repo"   at "http://seratch.github.com/mvn-repo/releases",
-  "sbt-idea-repo"         at "http://mpeltonen.github.com/maven/"
+  "akka.io"              at "http://akka.io/repository/",
+  "seratch.github.com"   at "http://seratch.github.com/mvn-repo/releases",
+  "mpeltonen.github.com" at "http://mpeltonen.github.com/maven/"
 )
 
 libraryDependencies <++= (scalaVersion) { scalaVersion =>
   Seq(
-    "ch.qos.logback"          %  "logback-classic"      % "1.0.0",
     "com.eed3si9n"            %% "sff4s-api"            % "0.1.1",
     "com.eed3si9n"            %% "sff4s-actors"         % "0.1.1",
     "com.eed3si9n"            %% "sff4s-juc"            % "0.1.1",
