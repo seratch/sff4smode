@@ -9,7 +9,7 @@ object Sff4sModeBuild extends Build {
     sbtPlugin := false,
     organization := "com.github.seratch",
     name := "sff4smode",
-    version := "0.1.1",
+    version := "0.1.2",
     publishTo <<= (version) {
       version: String =>
         Some(
